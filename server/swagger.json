@@ -1,0 +1,67 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Game Asset Management API",
+    "version": "1.0.0",
+    "description": "API for managing game assets and triggering builds."
+  },
+  "paths": {
+    "/assets": {
+      "get": {
+        "summary": "Fetch all assets",
+        "responses": {
+          "200": {
+            "description": "List of assets"
+          }
+        }
+      },
+      "post": {
+        "summary": "Upload a new asset",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "name": { "type": "string" },
+                  "type": { "type": "string" },
+                  "size": { "type": "number" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Asset uploaded"
+          }
+        }
+      }
+    },
+    "/builds/trigger": {
+      "post": {
+        "summary": "Trigger a game build",
+        "responses": {
+          "200": {
+            "description": "Build triggered successfully"
+          }
+        }
+      }
+    },
+    "/builds/status": {
+      "get": {
+        "summary": "Get build status",
+        "responses": {
+          "200": {
+            "description": "Current build status"
+          }
+        }
+      }
+    }
+  }
+}

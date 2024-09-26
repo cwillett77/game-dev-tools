@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2016" /* Keep as is, but you can change this to 'es2020' for more modern JavaScript features if needed. */,
+    "module": "commonjs" /* Keep as you're using Node.js. */,
+    "lib": ["es2020"] /* Include libraries needed for ES2020. */,
+    "resolveJsonModule": true /* Allow importing JSON files. */,
+    "esModuleInterop": true /* Allow seamless imports from CommonJS modules. */,
+    "forceConsistentCasingInFileNames": true /* Ensure consistent casing in imports. */,
+    "skipLibCheck": true /* Skip checking .d.ts files for performance. */,
+
+    /* Modules */
+    "moduleResolution": "node" /* Resolve modules the Node.js way. */,
+    "rootDir": "./" /* Specify the root folder for your source files. */,
+    "outDir": "./dist" /* Output directory for compiled files. */,
+
+    /* Strict Type-Checking Options */
+    "strict": true /* Enable all strict type-checking options. */,
+    "noImplicitAny": true /* Disallow the 'any' type unless explicitly defined. */,
+    "strictNullChecks": true /* Check for 'null' and 'undefined' types. */,
+
+    /* Additional Type Checking */
+    "noUnusedLocals": true /* Report errors on unused local variables. */,
+    "noUnusedParameters": true /* Report errors on unused parameters. */,
+    "noImplicitReturns": true /* Ensure all code paths in a function return a value. */,
+
+    /* Emit */
+    "sourceMap": true /* Generate source map files for debugging. */,
+    "removeComments": true /* Remove comments from emitted files. */
+  },
+  "include": ["./**/*.ts"] /* Include all TypeScript files in the project. */,
+  "exclude": [
+    "node_modules",
+    "dist"
+  ] /* Exclude node_modules and dist from compilation. */
+}

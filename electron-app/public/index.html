@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+      <meta
+        http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; connect-src 'self' http://localhost:5000; style-src 'self'; img-src 'self' data:"
+      />
+    </head>
+
+    <title>Game Asset Management - Electron</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      input,
+      button {
+        margin: 10px 0;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Game Asset Management</h1>
+
+    <!-- Upload Form -->
+    <form id="uploadForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="type">Type:</label>
+      <input type="text" id="type" name="type" required />
+
+      <label for="file">File:</label>
+      <input type="file" id="file" name="file" required />
+
+      <button type="submit">Upload Asset</button>
+    </form>
+
+    <h2>Assets List</h2>
+    <div id="assetsList"></div>
+
+    <script src="../renderer.js"></script>
+  </body>
+</html>

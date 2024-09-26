@@ -1,0 +1,4 @@
+client/node_modules/
+electron-app/node_modules/
+server/node_modules
+
